@@ -601,18 +601,56 @@ Spring MVC：
 
 ### columnLike
 
-### columnUnderline
+- 类型：`boolean`
+- 默认值：`false`
+
+String 类型的字段是否在生成 where 条件时使用 LIKE(生效于 queryWrapper 以及 updateWrapper 内的 entity)
 
 ### dbType
 
+- 类型：`Enum`
+- 默认值：`other`
+
+默认的类型属于不支持的数据库,但是启动时没有指定会自动根据数据库连接信息获取值,如果还是 other 类型则会抛出异常
+
 ### fieldStrategy
+
+- 类型：`Enum`
+- 默认值：`not_null`
+
+此属于用于生成的注入进baseMapper的 sql, 指定当前字段生成 if 标签的形式(主键除外,主键)
 
 ### IdType
 
+- 类型：`Enum`
+- 默认值：`id_worker`
+
+主键的策略
+
 ### logicDeleteValue
+
+- 类型：`string`
+- 默认值：`1`
+
+逻辑删除默认值(此条数据已被逻辑删除)
 
 ### logicNotDeleteValue
 
+- 类型：`string`
+- 默认值：`0`
+
+逻辑未删除默认值(此条数据未被逻辑删除)
+
 ### tablePrefix
 
+- 类型：`string`
+- 默认值：``
+
+全局表名的前缀(使用注解指定了表名的 entity 除外)
+
 ### tableUnderline
+
+- 类型：`boolean`
+- 默认值：`true`
+
+表名、是否使用下划线命名
